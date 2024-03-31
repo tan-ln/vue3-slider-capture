@@ -10,5 +10,14 @@ export default defineConfig({
       '~': path.resolve(__dirname, '/'),
       '@': path.resolve(__dirname, '/src'),
     }
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3901',
+        // target: 'http://docker.guangeryi.com:3901/', // 测试环境
+        changeOrigin: true,
+      },
+    }
   }
 })

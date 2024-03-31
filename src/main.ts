@@ -4,6 +4,7 @@ import '@arco-design/web-vue/dist/arco.css';
 import './style.css'
 import App from './App.vue'
 
-createApp(App)
-  .use(ArcoVue)
-  .mount('#app')
+const app =createApp(App)
+
+app.use(ArcoVue)
+app.mount('#app')
